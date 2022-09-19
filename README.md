@@ -40,7 +40,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [123](123)
+- Live Site URL: [https://zerescas.github.io/interactive-rating-component/](https://zerescas.github.io/interactive-rating-component/)
 
 ## My process
 

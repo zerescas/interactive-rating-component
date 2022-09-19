@@ -67,14 +67,6 @@ p {
     width: var(--circle-size);
 }
 
-.item-spacing {
-    margin: 0 0 1.9em 0;
-}
-
-.item-spacing:last-child {
-    margin: 0;
-}
-
 .icon-star {
     width: 1em;
     height: 1em;
@@ -109,6 +101,16 @@ main {
     color: var(--light-grey);
     font-size: 0.9375em;
     line-height: 1.65;
+}
+
+/* Margin between items in the card */
+
+.card-small>* {
+    margin: 0 0 1.9em 0;
+}
+
+.card-small>*:last-child {
+    margin: 0;
 }
 
 /* Rating Options */
