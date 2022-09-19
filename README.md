@@ -48,9 +48,59 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties and flexbox
+- Interaction with DOM
 - Javascript with jQuery
 
 ### What I learned
+
+<strong>The goal - get all items with a specifical class and add click event (set inner text) to them.</strong> <br> 
+The vanilla way interaction with "Document Object Model" looks so wordy. Also I need to iterate manually through items.
+```js
+// get all items with a class "rating-option"
+var ratingOptions = document.querySelectorAll(".rating-option");
+// or
+ratingOptions = document.getElementsByClassName("rating-option");
+
+// add click event to each item
+ratingOptions.forEach((ratingOption) => {
+    ratingOption.addEventListener("click", function() {
+        this.innerHTML = "Custom Message";
+    })
+});
+```
+
+But there is other way - jQuery. The library which makes life easer.
+```js
+// get all items with a class "rating-option" AND add click event to them
+$(".rating-option").on("click", function() {
+    $(this).text("Custom Message");
+});
+```
+
+There's some interesting jQuery functions
+```js
+
+// get css property "width"
+$(".example-class").css("padding")
+
+// set css property "width" to 1rem
+$(".example-class").css("padding", "1rem")
+
+// Hide element through animate opactiy from 1 to 0
+$(".example-class").fadeOut();
+
+// Show element through animate opactiy from 1 to 0
+$(".example-class").fadeIn();
+
+// Animate custom css properties
+$(".example-class").animate({width: 100%});
+
+// Chain of functions. Next function gets called after the previous function ended
+$(".example-class").fadeOut().fadeIn();
+
+// ...
+
+```
 
 ## Author
 
