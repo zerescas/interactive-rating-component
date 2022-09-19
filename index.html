@@ -1,49 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <!-- Rating state start -->
+    <title>Frontend Mentor | Interactive rating component</title>
 
-  How did we do?
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
 
-  1 2 3 4 5
+  <body>
 
-  Submit
+    <main>
 
-  <!-- Rating state end -->
+      <!-- Rating state -->
+      <div class="card-small" id="rating-card">
 
-  <!-- Thank you state start -->
+        <div class="circle item-spacing">
+          <img class="icon-star" src="/images/icon-star.svg" alt="">
+        </div>
 
-  You selected <!-- Add rating here --> out of 5
+        <div class="item-spacing">
+          <h1 class="header">How did we do?</h1>
 
-  Thank you!
+          <p class="message">Please let us know how we did with your support request. All feedback is appreciated
+            to help us improve our offering!</p>
+        </div>
 
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
+        <div class="rating-options-container item-spacing">
 
-  <!-- Thank you state end -->
+          <div>
+            <div class="circle rating-option">1</div>
+          </div>
+          <div>
+            <div class="circle rating-option">2</div>
+          </div>
+          <div>
+            <div class="circle rating-option">3</div>
+          </div>
+          <div>
+            <div class="circle rating-option">4</div>
+          </div>
+          <div>
+            <div class="circle rating-option">5</div>
+          </div>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        </div>
+
+        <button id="submit-button" class="btn btn-primary btn-disabled item-spacing"
+          type="button"><span>Submit</span></button>
+
+      </div>
+
+      <!-- Thanks state -->
+      <div class="card-small disabled" id="review-thanks-card">
+
+        <div class="item-spacing">
+          <img src="/images/illustration-thank-you.svg" alt="">
+        </div>
+
+        <div id="selected-rating-info" class="info-box item-spacing">
+          <span>You selected 0 out of 5</span>
+        </div>
+
+        <div class="item-spacing">
+          <h1 class="header">Thank you!</h1>
+
+          <p class="message">We appreciate you taking the time to give a rating. If you ever need more support,
+            don’t hesitate to get in touch!</p>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer>
+
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+        Coded by <a href="https://www.frontendmentor.io/profile/zerescas">zerescas</a>
+      </div>
+
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+
 </html>
