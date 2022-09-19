@@ -72,6 +72,10 @@ p {
     height: 1em;
 }
 
+.icon-success {
+    width: 10em;
+}
+
 /* Main  */
 
 main {

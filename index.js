@@ -19,7 +19,7 @@ $(".rating-option").on("click", function () {
 
 $("#submit-button").on("click", function () {
     if (selectedOption) {
-        $("#selected-rating-info").text(`You selected ${$(selectedOption).text()} out of 5`);
+        $("#rating-score").text($(selectedOption).text());
 
         $("#rating-card").fadeOut(250, () => {
             $("#review-thanks-card").fadeIn(250);
